@@ -1,0 +1,24 @@
+﻿1. create db
+----sql server
+-
+go
+create database StatlDB on primary
+( 	NAME = N'StatlDB_1_Data', FILENAME = N'C:\DBLocation\Projects\StatlDB\sqlserver\Data\StatlDB_1_Data.mdf', SIZE = 3072KB, MAXSIZE = 10024 KB, FILEGROWTH = 1024KB)
+LOG ON 
+(NAME = N'StatlDB_1_Log', FILENAME = N'C:\DBLocation\Projects\StatlDB\sqlserver\Log\StatlDB_1_Log.ldf', SIZE =1024KB,  MAXSIZE = 1024KB,  FILEGROWTH = 10%)
+go
+-
+USE StatlDB;
+
+CREATE TABLE StatUser
+(
+	idUser SMALLINT IDENTITY(1,1) NOT NULL ,
+	matriculeUser NVARCHAR(20) NOT NULL,
+	nameUser NVARCHAR(50),
+	PasswordUser NVARCHAR(50)
+) 
+go
+-
+
+2. create login form
+
